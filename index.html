@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="closed_container" id="header">
+		<div class="header" onclick="colapse()" >
+			<p>What is HTML?</p>
+			<i class="fa fa-plus-circle" aria-hidden="true" id="icon"></i>
+		</div>
+		<div class="closed_body" id="body">
+			<p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. ... "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. Links are a fundamental aspect of the Web.</p>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		
+		var header = document.getElementById("header");
+		var body = document.getElementById("body")
+
+		function colapse(){
+		if(icon.classList.contains("fa-times")){
+			icon.classList.remove("fa-times");
+			icon.classList.add("fa-plus-circle")
+			header.classList.remove("container");
+			header.classList.add("closed_container");
+			body.classList.remove("body");
+			body.classList.add("closed_body");
+		}
+		else{
+			icon.classList.remove("fa-plus-circle");
+			icon.classList.add("fa-times")
+			header.classList.remove("closed_container");
+			header.classList.add("container");
+			body.classList.remove("closed_body");
+			body.classList.add("body");
+
+
+		}
+		}
+
+	</script>
+</body>
+</html>
